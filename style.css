@@ -1,0 +1,136 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #11b0c8;
+    --error-color: #ff5252;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    background-color: #222;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0e8fa3;
+}
+
+/* Estados da Página */
+.loading {
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.error-message {
+    color: var(--error-color);
+    background-color: rgba(255, 82, 82, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--error-color);
+}
+
+/* Cartão do Personagem */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.info-row {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.info-row strong {
+    color: var(--text-color);
+}
+
+/* Badge dinâmico de Status */
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-alive { background-color: #2e7d32; color: #fff; }
+.status-dead { background-color: #c62828; color: #fff; }
+.status-unknown { background-color: #4f4f4f; color: #fff; }

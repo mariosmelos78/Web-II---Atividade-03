@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador - Rick and Morty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rick and Morty - Personagens</h1>
+        
+        <!-- Controle de interação para novas requisições -->
+        <div class="search-box">
+            <input type="number" id="characterId" min="1" max="826" value="1" placeholder="ID do Personagem (1-826)">
+            <button id="searchBtn">Buscar</button>
+        </div>
+
+        <!-- Área onde o estado de Carregamento, Erro ou o Cartão será exibido -->
+        <div id="contentArea"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
