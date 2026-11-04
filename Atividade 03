@@ -1,0 +1,10 @@
+# Atividade: Consumindo uma API Pública
+
+### API Utilizada
+* **Nome**: Rick and Morty API
+* **Link da Documentação**: https://rickandmortyapi.com
+* **Endpoint Aplicado**: `https://rickandmortyapi.comapi/character/{id}`
+
+### Descrição da Página
+A aplicação consiste em um buscador dinâmico em que o usuário digita o número correspondente ao ID de um personagem do universo de Rick and Morty. 
+A página processa requisições assíncronas nativas utilizando `async/await` e manipula o DOM por meio de `createElement` para exibir de forma organizada fotos, nomes, espécies, origens e o status atualizado do personagem.
