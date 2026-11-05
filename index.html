@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador - Rick and Morty</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta IBGE - Localidades do Brasil</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Rick and Morty - Personagens</h1>
-        
-        <!-- Controle de interação para novas requisições -->
-        <div class="search-box">
-            <input type="number" id="characterId" min="1" max="826" value="1" placeholder="ID do Personagem (1-826)">
-            <button id="searchBtn">Buscar</button>
-        </div>
+  <div class="app-container">
+    <header>
+      <h1>Consulta de Localidades - IBGE</h1>
+      <p>Selecione um estado para visualizar seus dados geográficos e municípios.</p>
+    </header>
 
-        <!-- Área onde o estado de Carregamento, Erro ou o Cartão será exibido -->
-        <div id="contentArea"></div>
-    </div>
+    <main>
+      <!-- Controle de Interação -->
+      <section class="controls">
+        <label for="select-uf">Estado (UF):</label>
+        <select id="select-uf">
+          <option value="">-- Carregando estados... --</option>
+        </select>
+      </section>
 
-    <script src="script.js"></script>
+      <!-- Div para Mensagens de Status e Erros -->
+      <div id="status-container" class="status-container"></div>
+
+      <!-- Container das Informações da UF -->
+      <section id="uf-info" class="uf-info card hidden"></section>
+
+      <!-- Container dos Municípios -->
+      <section id="municipios-container" class="municipios-container card hidden">
+        <h2>Municípios</h2>
+        <p id="total-municipios" class="total-badge"></p>
+        <ul id="lista-municipios" class="lista-municipios"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
