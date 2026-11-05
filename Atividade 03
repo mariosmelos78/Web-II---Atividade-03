@@ -1,10 +1,28 @@
-# Atividade: Consumindo uma API Pública
+# Consulta de Localidades do Brasil (IBGE)
 
-### API Utilizada
-* **Nome**: Rick and Morty API
-* **Link da Documentação**: https://rickandmortyapi.com
-* **Endpoint Aplicado**: `https://rickandmortyapi.comapi/character/{id}`
+Aplicação web desenvolvida como atividade prática da disciplina de Desenvolvimento Web 2 (IFCE Campus Maranguape). A página consome a API de Localidades do IBGE para exibir dados geográficos e lista de municípios por estado brasileiro.
 
-### Descrição da Página
-A aplicação consiste em um buscador dinâmico em que o usuário digita o número correspondente ao ID de um personagem do universo de Rick and Morty. 
-A página processa requisições assíncronas nativas utilizando `async/await` e manipula o DOM por meio de `createElement` para exibir de forma organizada fotos, nomes, espécies, origens e o status atualizado do personagem.
+## 📌 Informações da API
+- **Nome da API:** IBGE Localidades
+- **Documentação:** [Serviços de Dados do IBGE]([suspicious link removed])
+- **Endpoints Utilizados:**
+  - `GET https://servicodados.ibge.gov.br/api/v1/localidades/estados`
+  - `GET https://servicodados.ibge.gov.br/api/v1/localidades/estados/{UF}/municipios`
+
+## 🚀 Funcionalidades
+- Carregamento assíncrono dos estados brasileiros no campo de seleção (`<select>`).
+- Busca dinâmica de municípios ao alterar o estado selecionado.
+- Exibição de 5 informações distintas: Nome do Estado, Sigla da UF, Nome/Sigla da Região, Contagem Total e Lista de Municípios.
+- Indicador visual de **"Carregando..."** durante as requisições.
+- Tratamento amigável de erros de rede ou falha de requisição com botão de **"Tentar de novo"**.
+- Layout responsivo adaptado para telas mobile e desktop com tema escuro.
+
+## 🛠️ Tecnologias Utilizadas
+- HTML5 Semântico
+- CSS3 (Flexbox, Grid e Tema Escuro)
+- JavaScript ES6+ (`fetch`, `async/await`, manipulação de DOM com `createElement`)
+
+## 💻 Como Executar
+1. Clone este repositório ou baixe os arquivos em sua máquina.
+2. Certifique-se de que os arquivos `index.html`, `style.css` e `script.js` estejam na mesma pasta.
+3. Abra o arquivo `index.html` diretamente em seu navegador preferido (ou utilize a extensão *Live Server* do VS Code).
